@@ -13,6 +13,9 @@ class JINUser: NSObject {
     private override init() {
         Name = UserDefaults.user.name.stringValue ?? ""
         Age = UserDefaults.user.age.stringValue ?? ""
+        Nick = UserDefaults.user.nick.stringValue ?? ""
+        Id = UserDefaults.user.id.stringValue ?? ""
+        Mobile = UserDefaults.user.mobile.stringValue ?? ""
     }
 
     var Name: String?{
@@ -27,5 +30,22 @@ class JINUser: NSObject {
         }
     }
     
+    var Nick: String?{
+        didSet{
+            UserDefaults.user.nick.store(value: Nick)
+        }
+    }
     
+    var Id: String?{
+        didSet{
+            UserDefaults.user.id.store(value: Id)
+        }
+    }
+    
+    var Mobile: String?{
+        didSet{
+            UserDefaults.user.mobile.store(value: Mobile)
+        }
+    }
+  
 }

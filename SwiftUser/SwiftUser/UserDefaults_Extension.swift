@@ -13,6 +13,9 @@ extension UserDefaults {
     enum user: String,UserDefaultsProtocol {
         case name
         case age
+        case nick
+        case mobile
+        case id
     }
 }
 
